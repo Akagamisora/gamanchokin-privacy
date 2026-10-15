@@ -18,6 +18,8 @@
         --ink-faint: rgba(0, 0, 0, 0.38);
         --line: rgba(0, 0, 0, 0.09);
         --line-faint: rgba(0, 0, 0, 0.07);
+        --paper: rgba(0, 0, 0, 0.02);
+        --card-hover: rgba(0, 0, 0, 0.3);
       }
 
       @media (prefers-color-scheme: dark) {
@@ -29,6 +31,8 @@
           --ink-faint: rgba(255, 255, 255, 0.4);
           --line: rgba(255, 255, 255, 0.13);
           --line-faint: rgba(255, 255, 255, 0.1);
+          --paper: rgba(255, 255, 255, 0.04);
+          --card-hover: rgba(255, 255, 255, 0.35);
         }
       }
 
@@ -121,6 +125,80 @@
         text-decoration: underline;
         text-underline-offset: 3px;
         text-decoration-color: var(--line-strong, rgba(128, 128, 128, 0.6));
+      }
+
+      .other-apps {
+        margin-top: 88px;
+        padding-top: 32px;
+        border-top: 1px solid var(--line);
+      }
+
+      .other-title {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        color: var(--ink-label);
+        margin: 0 0 20px;
+      }
+
+      .app-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .app-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 16px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.15s ease, transform 0.15s ease;
+      }
+
+      .app-card:hover {
+        border-color: var(--card-hover);
+        transform: translateY(-1px);
+      }
+
+      .app-card-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 22.4%;
+        flex: none;
+        display: block;
+      }
+
+      .app-card-meta {
+        min-width: 0;
+      }
+
+      .app-card-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.6;
+      }
+
+      .app-card-desc {
+        font-size: 12.5px;
+        color: var(--ink-faint);
+        line-height: 1.6;
+      }
+
+      .app-card-arrow {
+        margin-left: auto;
+        color: var(--ink-faint);
+        flex: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .app-card {
+          transition: none;
+        }
       }
 
       footer {
@@ -248,6 +326,133 @@
         ご自身の情報の開示・訂正・削除のご希望も、上記アドレスで受け付けます。
       </p>
       <p>運営者：Sora Akagami（個人開発者）</p>
+
+      <section class="other-apps">
+        <h2 class="other-title">OTHER APPS BY AKAGAMISORA</h2>
+        <div class="app-list">
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/mannaka-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/mannaka-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">まんなか - 集合駅を公平に提案</div>
+              <div class="app-card-desc">参加者の最寄り駅から、「ちょうど真ん中」の集合駅を提案</div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/hitokoma-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/hitokoma-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">ひとこま - 写真と一言の日記</div>
+              <div class="app-card-desc">写真 1 枚と一言、地図で振り返るフォトログ</div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/zutto-minesweeper-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/zutto-minesweeper-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">ずっとマインスイーパー</div>
+              <div class="app-card-desc">推測なしで必ず解ける、終わらない 9×9 マインスイーパー</div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/doitnow-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/doitnow-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">Do It Now ! ー 便利じゃない、意味のあるタスク</div>
+              <div class="app-card-desc">36時間で消える、3つだけ。</div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/dakke-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/dakke-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">Dakke</div>
+              <div class="app-card-desc">「あの人、誰だっけ」をなくす、顔から引く出会いの記録</div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/shitsukoi-alarm-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/shitsukoi-alarm-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">しつこいアラーム - 締切まで何度も鳴らす</div>
+              <div class="app-card-desc">
+                間に合わせたい時刻まで、その手前から何度でも鳴らす
+              </div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/hottoku-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/hottoku-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">ほっとく - 休憩タイマーと手放した記録</div>
+              <div class="app-card-desc">休むと決めたら押すだけ。休んだ時間と手放したことが溜まる</div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+        </div>
+      </section>
 
       <footer>がまん貯金 — 我慢した分だけ貯めて、ご褒美に使うアプリ</footer>
     </div>
